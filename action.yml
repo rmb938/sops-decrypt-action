@@ -9,3 +9,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.secrets-directory }}
+branding:
+  icon: unlock
+  color: red
