@@ -1,0 +1,11 @@
+name: 'Decrypt SOPS Secrets'
+description: 'Run sops to decrypt secrets'
+inputs:
+  secrets-directory: 
+    description: 'The directory that contains sops encrypted secrets'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.secrets-directory }}
